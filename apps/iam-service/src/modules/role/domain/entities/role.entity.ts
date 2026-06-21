@@ -1,0 +1,9 @@
+export class Role {
+  id: string;
+  tenantId: string;
+  name: string;
+  code: string;
+  description?: string;
+  createdAt: Date;
+  updatedAt: Date;
+}

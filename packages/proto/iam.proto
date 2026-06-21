@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package iam;
+
+service UserService {
+  rpc GetUsers(GetUsersRequest)
+    returns (GetUsersResponse);
+}
+
+message GetUsersRequest {}
+
+message User {
+  string id = 1;
+  string email = 2;
+  string firstName = 3;
+  string lastName = 4;
+}
+
+message GetUsersResponse {
+  repeated User users = 1;
+}

@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package procurement;
+
+service ProcurementService {
+  rpc GetProcurements(GetProcurementsRequest)
+    returns (GetProcurementsResponse);
+}
+
+message GetProcurementsRequest {}
+
+message Procurement {
+  string id = 1;
+}
+
+message GetProcurementsResponse {
+  repeated Procurement procurements = 1;
+}

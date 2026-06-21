@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package sales;
+
+service SalesService {
+  rpc GetSales(GetSalesRequest)
+    returns (GetSalesResponse);
+}
+
+message GetSalesRequest {}
+
+message Sale {
+  string id = 1;
+}
+
+message GetSalesResponse {
+  repeated Sale sales = 1;
+}
